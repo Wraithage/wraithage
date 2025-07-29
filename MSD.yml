@@ -1,0 +1,1010 @@
+views:
+  - title: Master Systems Display
+    header:
+      layout: responsive
+      badges_position: bottom
+      badges_wrap: wrap
+    sections:
+      - type: grid
+        cards:
+          - type: markdown
+            content: '# Back Hall'
+            icon: mdi:coat-rack
+          - square: false
+            type: grid
+            cards:
+              - square: false
+                type: grid
+                cards:
+                  - type: thermostat
+                    entity: climate.thermostat
+                    name: Thermostat
+                    show_current_as_primary: true
+                    features:
+                      - type: climate-fan-modes
+                        style: dropdown
+                      - type: climate-hvac-modes
+                  - type: tile
+                    features_position: bottom
+                    vertical: false
+                    entity: sensor.thermostat_current_humidity
+                    name: Humidity
+                title: Climate
+                columns: 1
+              - square: false
+                type: grid
+                cards:
+                  - type: tile
+                    features_position: bottom
+                    vertical: false
+                    entity: binary_sensor.thermostat_occupancy
+                    name: Occupancy
+                  - type: tile
+                    features_position: bottom
+                    vertical: false
+                    entity: binary_sensor.thermostat_motion
+                    name: Motion
+                title: Security
+                columns: 1
+              - square: false
+                type: grid
+                cards:
+                  - show_name: true
+                    show_icon: true
+                    type: button
+                    entity: light.back_hallway
+                title: Lights
+                columns: 1
+      - type: grid
+        cards:
+          - type: markdown
+            content: '# Back Porch'
+          - square: false
+            type: grid
+            cards:
+              - square: false
+                type: grid
+                cards:
+                  - type: tile
+                    features_position: bottom
+                    vertical: false
+                    entity: sensor.home_weather_station_temperature
+                    name: Temperature
+                  - type: tile
+                    features_position: bottom
+                    vertical: false
+                    entity: sensor.home_weather_station_feels_like
+                    name: Feels Like
+                  - type: tile
+                    features_position: bottom
+                    vertical: false
+                    entity: sensor.home_weather_station_humidity
+                    name: Humidity
+                  - type: tile
+                    features_position: bottom
+                    vertical: false
+                    entity: sensor.home_weather_station_absolute_pressure
+                    name: Pressure
+                title: Climate
+                columns: 1
+              - square: false
+                type: grid
+                cards:
+                  - camera_view: live
+                    fit_mode: cover
+                    type: picture-glance
+                    image: https://demo.home-assistant.io/stub_config/kitchen.png
+                    entities: []
+                    camera_image: camera.nest_cam_back_porch
+                  - type: tile
+                    features_position: bottom
+                    vertical: false
+                    entity: event.nest_cam_back_porch_motion
+                title: Security
+                columns: 1
+              - square: false
+                type: grid
+                cards:
+                  - show_name: true
+                    show_icon: true
+                    type: button
+                    entity: light.back_porch
+                  - show_name: true
+                    show_icon: true
+                    type: button
+                    entity: light.back_porch_string_lights
+                title: Lights
+                columns: 1
+              - square: false
+                type: grid
+                cards:
+                  - show_name: true
+                    show_icon: true
+                    type: button
+                    entity: switch.back_porch_ac
+                  - show_name: true
+                    show_icon: true
+                    type: button
+                    entity: switch.bug_zapper
+                title: Devices
+                columns: 1
+              - square: false
+                type: grid
+                cards:
+                  - type: media-control
+                    entity: media_player.back_porch
+                title: Media
+                columns: 1
+            columns: 2
+      - type: grid
+        cards:
+          - type: markdown
+            content: '# Back Yard'
+          - square: false
+            type: grid
+            cards:
+              - square: false
+                type: grid
+                cards:
+                  - type: tile
+                    features_position: bottom
+                    vertical: false
+                    entity: sensor.home_weather_station_temperature
+                    name: Temperature
+                  - type: tile
+                    entity: sensor.home_weather_station_feels_like
+                    features_position: bottom
+                    vertical: false
+                    name: Feels Like
+                  - type: tile
+                    entity: sensor.home_weather_station_humidity
+                    features_position: bottom
+                    vertical: false
+                    name: Humidity
+                  - type: tile
+                    features_position: bottom
+                    vertical: false
+                    entity: sensor.home_weather_station_absolute_pressure
+                    name: Pressure
+                title: Climate
+                columns: 1
+              - square: false
+                type: grid
+                cards:
+                  - camera_view: live
+                    fit_mode: cover
+                    type: picture-glance
+                    image: https://demo.home-assistant.io/stub_config/kitchen.png
+                    entities: []
+                    camera_image: camera.nest_cam_backyard
+                  - type: tile
+                    features_position: bottom
+                    vertical: false
+                    entity: event.nest_cam_backyard_motion
+                    name: Motion
+                title: Security
+                columns: 1
+            columns: 2
+      - type: grid
+        cards:
+          - type: markdown
+            content: '# Cat Room'
+          - square: false
+            type: grid
+            cards:
+              - square: false
+                type: grid
+                cards:
+                  - type: tile
+                    features_position: bottom
+                    vertical: false
+                    entity: sensor.cat_room_temperature
+                  - type: tile
+                    features_position: bottom
+                    vertical: false
+                    entity: cover.cat_room_vent
+                    name: Vent
+                title: Climate
+                columns: 1
+              - square: false
+                type: grid
+                cards:
+                  - type: tile
+                    entity: binary_sensor.cat_room_occupancy
+                    features_position: bottom
+                    vertical: false
+                    name: Occupancy
+                  - type: tile
+                    features_position: bottom
+                    vertical: false
+                    entity: binary_sensor.cat_room_motion
+                    name: Motion
+                title: Security
+                columns: 1
+              - square: false
+                type: grid
+                cards:
+                  - show_name: true
+                    show_icon: true
+                    type: button
+                    entity: light.cat_room
+                title: Lights
+                columns: 1
+              - square: false
+                type: grid
+                cards:
+                  - show_name: true
+                    show_icon: true
+                    type: button
+                    entity: switch.cat_room_ceiling_fan
+                    name: Ceiling Fan
+                    icon: mdi:ceiling-fan
+                  - show_name: true
+                    show_icon: true
+                    type: button
+                    entity: switch.cat_room_air_purifier
+                    icon: mdi:air-purifier
+                    name: Air Purifier
+                title: Devices
+                columns: 1
+              - square: false
+                type: grid
+                cards:
+                  - type: media-control
+                    entity: media_player.cat_room_speaker
+                title: Media
+                columns: 1
+              - square: false
+                type: grid
+                cards:
+                  - type: tile
+                    features_position: bottom
+                    vertical: false
+                    entity: device_tracker.u7_pro_xgs_cat_room
+                title: IT
+                columns: 1
+      - type: grid
+        cards:
+          - type: markdown
+            content: '# David''s Bathroom'
+          - square: false
+            type: grid
+            cards:
+              - square: false
+                type: grid
+                cards:
+                  - type: media-control
+                    entity: media_player.david_s_bathroom_speaker
+                columns: 1
+                title: Media
+      - type: grid
+        cards:
+          - type: markdown
+            content: '# David''s Bedroom'
+          - square: false
+            type: grid
+            cards:
+              - square: false
+                type: grid
+                cards:
+                  - type: tile
+                    features_position: bottom
+                    vertical: false
+                    entity: sensor.davids_bedroom_temperature
+                  - type: tile
+                    entity: cover.david_s_bedroom_vent
+                    features_position: bottom
+                    vertical: false
+                title: Climate
+                columns: 1
+              - square: false
+                type: grid
+                cards:
+                  - type: tile
+                    features_position: bottom
+                    vertical: false
+                    entity: binary_sensor.davids_bedroom_occupancy
+                  - type: tile
+                    entity: binary_sensor.davids_bedroom_motion
+                    features_position: bottom
+                    vertical: false
+                title: Security
+                columns: 1
+              - square: false
+                type: grid
+                cards:
+                  - show_name: true
+                    show_icon: true
+                    type: button
+                    entity: light.david_s_bedroom
+                    name: Lights
+                title: Lights
+                columns: 1
+              - square: false
+                type: grid
+                cards:
+                  - show_name: true
+                    show_icon: true
+                    type: button
+                    entity: switch.david_s_air_purifier_socket_1
+                    name: Air Purifier
+                title: Devices
+                columns: 1
+              - square: false
+                type: grid
+                cards:
+                  - type: media-control
+                    entity: media_player.david_s_bedroom_display
+                title: Media
+                columns: 1
+      - type: grid
+        cards:
+          - type: markdown
+            content: '# Dining Room'
+          - square: true
+            type: grid
+            cards:
+              - square: false
+                type: grid
+                cards:
+                  - type: tile
+                    entity: sensor.dining_room_temperature
+                    features_position: bottom
+                    vertical: false
+                    name: Temperature
+                  - type: tile
+                    features_position: bottom
+                    vertical: false
+                    entity: cover.dining_room_vent
+                    name: Vent
+                title: Climate
+                columns: 1
+              - square: false
+                type: grid
+                cards:
+                  - type: tile
+                    entity: binary_sensor.dining_room_occupancy
+                    features_position: bottom
+                    vertical: false
+                    name: Occupancy
+                  - type: tile
+                    entity: binary_sensor.dining_room_motion
+                    features_position: bottom
+                    vertical: false
+                    name: Motion
+                title: Security
+                columns: 1
+              - square: false
+                type: grid
+                cards:
+                  - show_name: true
+                    show_icon: true
+                    type: button
+                    entity: light.dining_room
+                    name: Lights
+                title: Lights
+                columns: 1
+      - type: grid
+        cards:
+          - type: markdown
+            content: '# Driveway'
+          - square: false
+            type: grid
+            cards:
+              - square: false
+                type: grid
+                cards:
+                  - show_name: true
+                    show_icon: true
+                    type: button
+                    entity: light.driveway
+                    name: Lights
+                title: Lights
+                columns: 1
+            columns: 1
+      - type: grid
+        cards:
+          - type: markdown
+            content: '# Foyer & Front Hall'
+          - square: true
+            type: grid
+            cards:
+              - square: false
+                type: grid
+                cards:
+                  - type: tile
+                    entity: lock.front_door
+                    features_position: bottom
+                    vertical: false
+                    name: Front Door
+                title: Security
+                columns: 1
+              - square: false
+                type: grid
+                cards:
+                  - show_name: true
+                    show_icon: true
+                    type: button
+                    entity: light.foyer
+                    name: Foyer Lights
+                  - show_name: true
+                    show_icon: true
+                    type: button
+                    entity: light.foyer
+                    name: Front Hall Lights
+                title: Lights
+                columns: 1
+            columns: 2
+      - type: grid
+        cards:
+          - type: markdown
+            content: '# Front Porch'
+          - square: false
+            type: grid
+            cards:
+              - square: false
+                type: grid
+                cards:
+                  - camera_view: live
+                    fit_mode: cover
+                    type: picture-glance
+                    image: https://demo.home-assistant.io/stub_config/kitchen.png
+                    entities: []
+                    camera_image: camera.nest_doorbell
+                  - type: tile
+                    entity: event.nest_doorbell_chime
+                    features_position: bottom
+                    vertical: false
+                    name: Chime
+                  - type: tile
+                    entity: event.nest_doorbell_motion
+                    features_position: bottom
+                    vertical: false
+                    name: Motion
+                title: Security
+                columns: 1
+              - square: false
+                type: grid
+                cards:
+                  - show_name: true
+                    show_icon: true
+                    type: button
+                    entity: light.front_porch
+                    name: Lights
+                title: Lights
+                columns: 1
+            columns: 2
+      - type: grid
+        cards:
+          - type: markdown
+            content: '# Garage'
+          - square: false
+            type: grid
+            cards:
+              - square: false
+                type: grid
+                cards:
+                  - type: tile
+                    entity: binary_sensor.bridge_0a9e_connection_status
+                    features_position: bottom
+                    vertical: false
+                    name: Flair Bridge
+                  - type: tile
+                    entity: device_tracker.philips_hue_bridge_gen_2
+                    features_position: bottom
+                    vertical: false
+                    name: Hue Bridge
+                  - type: tile
+                    entity: device_tracker.rachio_3
+                    features_position: bottom
+                    vertical: false
+                    name: Rachio 3
+                  - type: tile
+                    entity: device_tracker.samsung_smartthings_hub
+                    features_position: bottom
+                    vertical: false
+                    name: SmartThings Hub
+                title: Devices
+                columns: 1
+              - square: false
+                type: grid
+                cards:
+                  - type: media-control
+                    entity: media_player.garage_speaker
+                title: Media
+                columns: 1
+              - square: false
+                type: grid
+                cards:
+                  - type: tile
+                    entity: device_tracker.ucg_ultra_home
+                    features_position: bottom
+                    vertical: false
+                    name: UCG Ultra
+                  - type: tile
+                    entity: device_tracker.usw_flex_2_5g_8_poe_garage
+                    features_position: bottom
+                    vertical: false
+                    name: USW Flex 2.5G 8 PoE
+                  - type: tile
+                    entity: device_tracker.usw_flex_mini_garage
+                    features_position: bottom
+                    vertical: false
+                    name: USW Flex Mini
+                title: IT
+                columns: 1
+            columns: 2
+      - type: grid
+        cards:
+          - type: markdown
+            content: '# Kitchen'
+          - square: false
+            type: grid
+            cards:
+              - square: false
+                type: grid
+                cards:
+                  - type: tile
+                    entity: sensor.kitchen_temperature
+                    features_position: bottom
+                    vertical: false
+                    name: Temperature
+                  - type: tile
+                    entity: cover.kitchen_vent
+                    features_position: bottom
+                    vertical: false
+                    name: Vent
+                title: Climate
+                columns: 1
+              - square: false
+                type: grid
+                cards:
+                  - type: media-control
+                    entity: media_player.kitchen_display
+                  - type: media-control
+                    entity: media_player.kitchen_speaker
+                title: Media
+                columns: 1
+            columns: 2
+      - type: grid
+        cards:
+          - type: markdown
+            content: '# Living Room'
+          - square: false
+            type: grid
+            cards:
+              - square: false
+                type: grid
+                cards:
+                  - type: tile
+                    entity: sensor.living_room_temperature
+                    features_position: bottom
+                    vertical: false
+                    name: Temp • Sensor
+                  - type: tile
+                    entity: sensor.home_weather_station_inside_temperature
+                    features_position: bottom
+                    vertical: false
+                    name: Temp • Weather Station
+                  - type: tile
+                    entity: sensor.home_weather_station_humidity_indoor
+                    features_position: bottom
+                    vertical: false
+                    name: Humidity
+                  - type: tile
+                    entity: cover.living_room_vent
+                    features_position: bottom
+                    vertical: false
+                    name: Vent 1
+                  - type: tile
+                    entity: cover.television_vent
+                    features_position: bottom
+                    vertical: false
+                    name: Vent 2
+                title: Climate
+                columns: 1
+              - square: false
+                type: grid
+                cards:
+                  - type: tile
+                    entity: binary_sensor.living_room_occupancy
+                    features_position: bottom
+                    vertical: false
+                    name: Occupancy
+                  - type: tile
+                    entity: binary_sensor.living_room_motion
+                    features_position: bottom
+                    vertical: false
+                    name: Motion
+                title: Security
+                columns: 1
+              - square: false
+                type: grid
+                cards:
+                  - show_name: true
+                    show_icon: true
+                    type: button
+                    entity: light.living_room
+                    name: Lights
+                  - show_name: true
+                    show_icon: true
+                    type: button
+                    entity: light.living_room_ceiling_fan_light
+                    name: Ceiling Lights
+                title: Lights
+                columns: 1
+              - square: false
+                type: grid
+                cards:
+                  - show_name: true
+                    show_icon: true
+                    type: button
+                    entity: fan.living_room_ceiling_fan_fan
+                    name: Ceiling Fan
+                    icon: mdi:ceiling-fan
+                  - show_name: true
+                    show_icon: true
+                    type: button
+                    entity: switch.living_room_air_purifier_socket_1
+                    name: Air Purifier
+                    icon: mdi:air-purifier
+                  - type: tile
+                    entity: device_tracker.irobot_roomba_combo_j7_rico_sweepe
+                    features_position: bottom
+                    vertical: false
+                    name: Roomba j7+
+                title: Devices
+                columns: 1
+              - square: false
+                type: grid
+                cards:
+                  - type: media-control
+                    entity: media_player.living_room_tv
+                  - type: media-control
+                    entity: media_player.living_room_speaker
+                  - type: media-control
+                    entity: media_player.living_room
+                title: Media
+                columns: 1
+              - square: false
+                type: grid
+                cards:
+                  - type: tile
+                    entity: device_tracker.usw_flex_2_5g_5_living_room
+                    features_position: bottom
+                    vertical: false
+                    name: USW Flex 2.5G 5
+                title: IT
+                columns: 1
+            columns: 2
+      - type: grid
+        cards:
+          - type: markdown
+            content: '# Master Bathroom'
+          - square: false
+            type: grid
+            cards:
+              - square: false
+                type: grid
+                cards:
+                  - type: tile
+                    entity: sensor.master_bathroom_temperature
+                    features_position: bottom
+                    vertical: false
+                    name: Temperature
+                  - type: tile
+                    entity: cover.master_bathroom_vent
+                    features_position: bottom
+                    vertical: false
+                    name: Vent
+                title: Climate
+                columns: 1
+              - square: false
+                type: grid
+                cards:
+                  - type: tile
+                    entity: binary_sensor.master_bathroom_occupancy
+                    features_position: bottom
+                    vertical: false
+                    name: Occupancy
+                  - type: tile
+                    entity: binary_sensor.master_bathroom_motion
+                    features_position: bottom
+                    vertical: false
+                    name: Motion
+                title: Security
+                columns: 1
+              - square: false
+                type: grid
+                cards:
+                  - type: media-control
+                    entity: media_player.master_bathroom_speaker
+                title: Media
+                columns: 1
+      - type: grid
+        cards:
+          - type: markdown
+            content: '# Master Bedroom'
+          - square: false
+            type: grid
+            cards:
+              - square: false
+                type: grid
+                cards:
+                  - type: tile
+                    entity: sensor.master_bedroom_temperature
+                    features_position: bottom
+                    vertical: false
+                    name: Temperature
+                  - type: tile
+                    entity: cover.master_bedroom_vent
+                    features_position: bottom
+                    vertical: false
+                    name: Vent
+                title: Climate
+                columns: 1
+              - square: false
+                type: grid
+                cards:
+                  - type: tile
+                    entity: binary_sensor.master_bedroom_occupancy
+                    features_position: bottom
+                    vertical: false
+                    name: Occupancy
+                  - type: tile
+                    entity: binary_sensor.master_bedroom_motion
+                    features_position: bottom
+                    vertical: false
+                    name: Motion
+                title: Security
+                columns: 1
+              - square: false
+                type: grid
+                cards:
+                  - show_name: true
+                    show_icon: true
+                    type: button
+                    entity: light.master_bedroom
+                    name: Lights
+                title: Lights
+                columns: 1
+              - square: false
+                type: grid
+                cards:
+                  - show_name: true
+                    show_icon: true
+                    type: button
+                    entity: switch.master_bedroom_ceiling_fan
+                    name: Ceiling Fan
+                    icon: mdi:ceiling-fan
+                  - show_name: true
+                    show_icon: true
+                    type: button
+                    entity: switch.master_bedroom_air_purifier_socket_1
+                    name: Air Purifier
+                    icon: mdi:air-purifier
+                title: Devices
+                columns: 1
+              - square: false
+                type: grid
+                cards:
+                  - type: media-control
+                    entity: media_player.master_bedroom_tv
+                  - type: media-control
+                    entity: media_player.master_bedroom_speaker
+                  - type: media-control
+                    entity: media_player.master_bedroom
+                title: Media
+                columns: 1
+      - type: grid
+        cards:
+          - type: markdown
+            content: '# Master Bedroom Closet'
+          - square: false
+            type: grid
+            cards:
+              - square: false
+                type: grid
+                cards:
+                  - type: tile
+                    entity: device_tracker.u7_pro_xgs_master_bedroom_closet
+                    features_position: bottom
+                    vertical: false
+                    name: U7 Pro XGS
+                title: IT
+                columns: 1
+            columns: 1
+      - type: grid
+        cards:
+          - type: markdown
+            content: '# Media Room'
+          - square: false
+            type: grid
+            cards:
+              - square: false
+                type: grid
+                cards:
+                  - type: tile
+                    entity: sensor.media_room_temperature
+                    features_position: bottom
+                    vertical: false
+                    name: Temperature
+                  - type: tile
+                    entity: cover.media_room_vent
+                    features_position: bottom
+                    vertical: false
+                    name: Vent
+                title: Climate
+                columns: 1
+              - square: false
+                type: grid
+                cards:
+                  - type: tile
+                    entity: binary_sensor.media_room_occupancy
+                    features_position: bottom
+                    vertical: false
+                    name: Occupancy
+                  - type: tile
+                    entity: binary_sensor.media_room_motion
+                    features_position: bottom
+                    vertical: false
+                    name: Motion
+                title: Security
+                columns: 1
+              - square: false
+                type: grid
+                cards:
+                  - show_name: true
+                    show_icon: true
+                    type: button
+                    entity: light.media_room
+                title: Lights
+                columns: 1
+              - square: false
+                type: grid
+                cards:
+                  - show_name: true
+                    show_icon: true
+                    type: button
+                    entity: switch.media_room_ceiling_fan
+                    name: Ceiling Fan
+                    icon: mdi:ceiling-fan
+                title: Devices
+                columns: 1
+              - square: false
+                type: grid
+                cards:
+                  - type: media-control
+                    entity: media_player.media_room_tv
+                  - type: media-control
+                    entity: media_player.media_room_speaker
+                  - type: media-control
+                    entity: media_player.media_room
+                title: Media
+                columns: 1
+      - type: grid
+        cards:
+          - type: markdown
+            content: '# Office'
+          - square: false
+            type: grid
+            cards:
+              - square: false
+                type: grid
+                cards:
+                  - type: tile
+                    entity: sensor.office_temperature
+                    features_position: bottom
+                    vertical: false
+                    name: Temperature
+                  - type: tile
+                    entity: cover.office_vent
+                    features_position: bottom
+                    vertical: false
+                    name: Vent
+                title: Climate
+                columns: 1
+              - square: false
+                type: grid
+                cards:
+                  - type: tile
+                    entity: binary_sensor.office_occupancy
+                    features_position: bottom
+                    vertical: false
+                    name: Occupancy
+                  - type: tile
+                    entity: binary_sensor.office_motion
+                    features_position: bottom
+                    vertical: false
+                    name: Motion
+                title: Security
+                columns: 1
+              - square: false
+                type: grid
+                cards:
+                  - show_name: true
+                    show_icon: true
+                    type: button
+                    entity: light.office
+                    name: Lights
+                  - show_name: true
+                    show_icon: true
+                    type: button
+                    entity: switch.tp_link_power_strip_8edb_dog_lamp
+                    icon: mdi:lava-lamp
+                    name: Dog Lamp
+                  - show_name: true
+                    show_icon: true
+                    type: button
+                    entity: switch.tp_link_power_strip_8edb_salt_lamp
+                    name: Salt Lamp
+                title: Lights
+                columns: 1
+              - square: false
+                type: grid
+                cards:
+                  - show_name: true
+                    show_icon: true
+                    type: button
+                    entity: switch.office_ceiling_fan
+                    icon: mdi:ceiling-fan
+                    name: Ceiling Fan
+                  - show_name: true
+                    show_icon: true
+                    type: button
+                    entity: switch.tp_link_power_strip_8edb_office_air_purifier
+                title: Devices
+                columns: 1
+              - square: false
+                type: grid
+                cards:
+                  - type: media-control
+                    entity: media_player.office_display
+                  - type: media-control
+                    entity: media_player.office_speaker_pair
+                title: Media
+                columns: 1
+              - square: false
+                type: grid
+                cards:
+                  - type: tile
+                    entity: sensor.mfc_l3720cdw_status
+                    features_position: bottom
+                    vertical: false
+                    name: Brother MFC-L3720CDW
+                  - type: tile
+                    entity: binary_sensor.pi_hole_status
+                    features_position: bottom
+                    vertical: false
+                    name: Thoth - Pi-Hole
+                  - type: tile
+                    entity: sensor.synology_ds224
+                    features_position: bottom
+                    vertical: false
+                    name: Plex
+                  - type: tile
+                    entity: sensor.synology_ds224_volume_1_volume_used
+                    features_position: bottom
+                    vertical: false
+                    name: Synology DS224+
+                  - type: tile
+                    entity: sensor.home_assistant_core_cpu_percent
+                    features_position: bottom
+                    vertical: false
+                    name: Home Assistant Green
+                  - type: tile
+                    entity: device_tracker.usw_flex_2_5g_8_poe_office
+                    features_position: bottom
+                    vertical: false
+                    name: USW Flex 2.5G 8 PoE
+                  - type: tile
+                    entity: device_tracker.u7_pro_wall_office
+                    features_position: bottom
+                    vertical: false
+                    name: U7 Pro Wall
+                title: IT
+                columns: 1
+            columns: 2
+    type: sections
+    max_columns: 4
+    cards: []

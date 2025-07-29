@@ -1,0 +1,277 @@
+views:
+  - title: Quick Controls
+    sections:
+      - type: grid
+        cards:
+          - features:
+              - type: area-controls
+            alert_classes:
+              - motion
+              - occupancy
+            sensor_classes:
+              - temperature
+              - humidity
+            features_position: bottom
+            display_type: picture
+            type: area
+            area: back_hallway
+            color: ''
+            grid_options:
+              columns: 6
+              rows: 4
+          - alert_classes:
+              - motion
+              - moisture
+            sensor_classes:
+              - temperature
+              - humidity
+            features_position: bottom
+            display_type: picture
+            type: area
+            area: back_porch
+            color: ''
+            features:
+              - type: area-controls
+          - features:
+              - type: area-controls
+            alert_classes:
+              - motion
+              - moisture
+            sensor_classes:
+              - temperature
+              - humidity
+              - pressure
+            features_position: bottom
+            display_type: picture
+            type: area
+            area: back_yard
+            color: ''
+          - features:
+              - type: area-controls
+                controls:
+                  - light
+                  - switch
+            alert_classes:
+              - motion
+              - occupancy
+            sensor_classes:
+              - temperature
+            features_position: bottom
+            display_type: picture
+            type: area
+            area: cat_room
+            color: ''
+          - alert_classes:
+              - motion
+              - moisture
+            sensor_classes:
+              - temperature
+              - humidity
+            features_position: bottom
+            display_type: picture
+            type: area
+            area: david_s_bathroom
+            color: ''
+            features:
+              - type: area-controls
+          - features:
+              - type: area-controls
+                controls:
+                  - light
+                  - switch
+            alert_classes:
+              - motion
+              - occupancy
+            sensor_classes:
+              - temperature
+            features_position: bottom
+            display_type: picture
+            type: area
+            area: david_s_bedroom
+            color: ''
+          - features:
+              - type: area-controls
+                controls:
+                  - light
+            alert_classes:
+              - motion
+              - occupancy
+            sensor_classes:
+              - temperature
+            features_position: bottom
+            display_type: picture
+            type: area
+            area: dining_room
+            color: ''
+          - alert_classes: []
+            sensor_classes: []
+            features_position: bottom
+            display_type: picture
+            type: area
+            area: driveway
+            color: ''
+            features:
+              - type: area-controls
+          - alert_classes:
+              - motion
+              - moisture
+            sensor_classes:
+              - temperature
+              - humidity
+            features_position: bottom
+            display_type: picture
+            type: area
+            area: foyer_front_hall
+            color: ''
+            features:
+              - type: area-controls
+          - alert_classes:
+              - motion
+              - moisture
+            sensor_classes:
+              - temperature
+              - humidity
+            features_position: bottom
+            display_type: picture
+            type: area
+            area: front_porch
+            color: ''
+            features:
+              - type: area-controls
+          - alert_classes:
+              - motion
+              - moisture
+            sensor_classes:
+              - temperature
+              - humidity
+            features_position: bottom
+            display_type: picture
+            type: area
+            area: garage
+            color: ''
+            features:
+              - type: area-controls
+          - alert_classes:
+              - motion
+              - moisture
+              - occupancy
+            sensor_classes:
+              - temperature
+              - humidity
+            features_position: bottom
+            display_type: picture
+            type: area
+            area: kitchen
+            color: ''
+            features:
+              - type: area-controls
+          - alert_classes:
+              - motion
+              - moisture
+            sensor_classes:
+              - temperature
+              - humidity
+            features_position: bottom
+            display_type: picture
+            type: area
+            area: laundry_room
+            color: ''
+            features:
+              - type: area-controls
+          - alert_classes:
+              - motion
+              - moisture
+              - occupancy
+            sensor_classes:
+              - temperature
+              - humidity
+            features_position: bottom
+            display_type: picture
+            type: area
+            area: living_room
+            color: ''
+            features:
+              - type: area-controls
+          - alert_classes:
+              - motion
+              - moisture
+              - occupancy
+            sensor_classes:
+              - temperature
+              - humidity
+            features_position: bottom
+            display_type: picture
+            type: area
+            area: master_bathroom
+            color: ''
+            features:
+              - type: area-controls
+          - alert_classes:
+              - motion
+              - moisture
+              - occupancy
+            sensor_classes:
+              - temperature
+              - humidity
+            features_position: bottom
+            display_type: picture
+            type: area
+            area: master_bedroom
+            color: ''
+            features:
+              - type: area-controls
+          - alert_classes:
+              - motion
+              - moisture
+            sensor_classes:
+              - temperature
+              - humidity
+            features_position: bottom
+            display_type: picture
+            type: area
+            area: master_bedroom_closet
+            color: ''
+            features:
+              - type: area-controls
+          - alert_classes:
+              - motion
+              - moisture
+              - occupancy
+            sensor_classes:
+              - temperature
+              - humidity
+            features_position: bottom
+            display_type: picture
+            type: area
+            area: media_room
+            color: ''
+            features:
+              - type: area-controls
+          - alert_classes:
+              - motion
+              - moisture
+              - occupancy
+            sensor_classes:
+              - temperature
+              - humidity
+            features_position: bottom
+            display_type: picture
+            type: area
+            area: office
+            color: ''
+            features:
+              - type: area-controls
+        column_span: 4
+    type: sections
+    max_columns: 4
+    cards: []
+    header:
+      card:
+        type: markdown
+        content: |-
+          # Quick Controls
+          Climate Readings • Light & Device Control
+        text_only: true
+      layout: responsive
+      badges_position: bottom
+      badges_wrap: wrap

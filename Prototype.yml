@@ -1,0 +1,123 @@
+views:
+  - title: Home
+    type: sections
+    max_columns: 2
+    header:
+      layout: responsive
+      badges_position: top
+      badges_wrap: scroll
+    sections:
+      - type: grid
+        cards:
+          - type: custom:mushroom-title-card
+            title: Climate & Weather
+            alignment: center
+            grid_options:
+              columns: 12
+              rows: 1
+          - square: true
+            type: grid
+            columns: 2
+            cards:
+              - type: thermostat
+                entity: climate.thermostat
+                features:
+                  - type: climate-hvac-modes
+                  - type: climate-fan-modes
+                    style: dropdown
+                name: ' '
+              - type: vertical-stack
+                cards:
+                  - type: custom:mushroom-climate-card
+                    entity: climate.master_bedroom_room
+                    icon: mdi:bed-king
+                    name: Master Bedroom
+                    show_temperature_control: false
+                  - type: custom:mushroom-climate-card
+                    entity: climate.office_room
+                    icon: mdi:desk
+                    name: Office
+                  - type: custom:mushroom-climate-card
+                    entity: climate.dining_room_room
+                    name: Dining Room
+                    icon: mdi:food-turkey
+                  - type: custom:mushroom-climate-card
+                    entity: climate.kitchen_room
+                    name: Kitchen
+                    icon: mdi:fridge
+                  - type: custom:mushroom-climate-card
+                    entity: climate.living_room_room
+                    name: Living Room
+                    icon: mdi:sofa
+                  - type: custom:mushroom-climate-card
+                    entity: climate.cat_room_room
+                    name: Cat Room
+                    icon: mdi:cat
+                  - type: custom:mushroom-climate-card
+                    entity: climate.media_room_room
+                    name: Media Room
+                    icon: mdi:television
+                  - type: custom:mushroom-climate-card
+                    entity: climate.david_s_bedroom_room
+                    name: David's Bedroom
+                    icon: mdi:bed-single
+              - type: custom:horizon-card
+                card_mod:
+                  style: |
+                    ha-card {
+                      height: 247px !important;
+                    }
+              - type: vertical-stack
+                cards:
+                  - type: custom:mushroom-entity-card
+                    entity: sensor.home_weather_station_temperature
+                    name: Outdoor Temperature
+                  - type: custom:mushroom-entity-card
+                    entity: sensor.home_weather_station_feels_like
+                    name: Outdoor Feels Like
+                  - type: custom:mushroom-entity-card
+                    entity: sensor.home_weather_station_humidity
+                    name: Outdoor Humidity
+                  - type: custom:mushroom-entity-card
+                    entity: sensor.home_weather_station_relative_pressure
+                    name: Outdoor Pressure
+      - type: grid
+        cards:
+          - type: custom:mushroom-title-card
+            title: Security
+            alignment: center
+          - square: true
+            type: grid
+            columns: 2
+            cards:
+              - type: vertical-stack
+                cards:
+                  - type: picture-glance
+                    camera_image: camera.nest_doorbell
+                    camera_view: live
+                    entities: []
+                    title: false
+                  - type: custom:mushroom-lock-card
+                    entity: lock.front_door
+                    name: Front Door Lock
+                  - type: custom:mushroom-entity-card
+                    entity: event.nest_doorbell_motion
+                    name: Doorbell Motion
+              - type: vertical-stack
+                cards:
+                  - type: picture-glance
+                    camera_image: camera.nest_cam_back_porch
+                    camera_view: live
+                    entities: []
+                    title: false
+                  - type: custom:mushroom-entity-card
+                    entity: event.nest_cam_back_porch_motion
+                    name: Back Porch Motion
+                  - type: picture-glance
+                    camera_image: camera.nest_cam_backyard
+                    camera_view: live
+                    entities: []
+                    title: false
+                  - type: custom:mushroom-entity-card
+                    entity: event.nest_cam_backyard_motion
+                    name: Back Yard Motion

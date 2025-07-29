@@ -1,0 +1,109 @@
+id: "1753489459207"
+name: Evening
+entities:
+  switch.tp_link_power_strip_8edb_air_purifier_kids_room:
+    state: "on"
+  switch.media_room_ceiling_fan:
+    state: "on"
+  light.media_room_lamp:
+    state: "on"
+    brightness: 191
+  light.media_room_light_1:
+    state: "on"
+    brightness: 191
+  light.media_room_light_2:
+    state: "on"
+    brightness: 191
+  light.media_room_light_3:
+    state: "on"
+    brightness: 191
+  switch.cat_room_air_purifier:
+    state: "on"
+  switch.cat_room_ceiling_fan:
+    state: "on"
+  light.cat_room:
+    state: "on"
+    brightness: 191
+  light.back_hallway:
+    state: "on"
+    brightness: 191
+  switch.back_porch_ac:
+    state: "on"
+  switch.bug_zapper:
+    state: "on"
+  fan.living_room_ceiling_fan_fan:
+    state: "on"
+  light.living_room_ceiling_fan_light:
+    state: "on"
+  light.kitchen_spotlight:
+    state: "on"
+    brightness: 191
+  switch.living_room_air_purifier_socket_1:
+    state: "on"
+  light.living_room_lamp_1:
+    state: "on"
+    brightness: 191
+  light.living_room_lamp_2:
+    state: "on"
+    brightness: 191
+  light.living_room_tv_light:
+    state: "on"
+    brightness: 191
+  light.front_hallway:
+    state: "on"
+    brightness: 191
+  switch.tp_link_power_strip_8edb_dog_lamp:
+    state: "on"
+  switch.tp_link_power_strip_8edb_office_air_purifier:
+    state: "on"
+  switch.office_ceiling_fan:
+    state: "on"
+  light.office:
+    state: "on"
+    brightness: 191
+  switch.tp_link_power_strip_8edb_salt_lamp:
+    state: "on"
+  lock.front_door:
+    state: locked
+  light.front_porch:
+    state: "on"
+    brightness: 255
+  light.driveway:
+    state: "on"
+    brightness: 255
+  light.david_lamp:
+    state: "on"
+    brightness: 191
+  light.david_bedroom_light_1:
+    state: "on"
+    brightness: 191
+  light.david_bedroom_light_2:
+    state: "on"
+    brightness: 191
+  light.david_bedroom_light_3:
+    state: "on"
+    brightness: 191
+  switch.master_bedroom_air_purifier_socket_1:
+    state: "on"
+  switch.master_bedroom_ceiling_fan:
+    state: "on"
+  light.master_bedroom_light_1:
+    state: "on"
+    brightness: 191
+  light.master_bedroom_light_2:
+    state: "on"
+    brightness: 191
+  light.master_bedroom_light_3:
+    state: "on"
+    brightness: 191
+  light.foyer:
+    state: "on"
+    brightness: 191
+  light.back_porch:
+    state: "on"
+    brightness: 255
+  light.dining_room:
+    state: "on"
+    brightness: 191
+  light.back_porch_string_lights:
+    state: "on"
